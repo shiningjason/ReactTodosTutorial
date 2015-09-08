@@ -4,8 +4,7 @@
   "description": "A React/Flux app generate by RF, powered with Babel",
   "main": "build/bundle.js",
   "dependencies": {
-    "flux": "^2.0.3",
-    "object-assign": "^2.0.0",
+    "flux": "^2.1.1",
     "react": "^0.13.3"
   },
   "devDependencies": {

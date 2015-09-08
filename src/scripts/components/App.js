@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = React.createClass({
+export default class App extends React.Component {
   render() {
     var codeBlockStyle = { "fontFamily": "monospace",
                            "backgroundColor": "#D0D0D0" };
@@ -22,6 +22,4 @@ const App = React.createClass({
     </div>
     );
   }
-});
-
-module.exports = App;
+}
