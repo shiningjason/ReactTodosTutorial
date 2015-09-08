@@ -19,7 +19,7 @@ class Header extends React.Component {
 2. [Modules](https://babeljs.io/docs/learn-es2015/#modules)
 ```js
 // Header.js
-export default class Component {}
+export default class Header {}
 
 // App.js
 import Header from './Header';
