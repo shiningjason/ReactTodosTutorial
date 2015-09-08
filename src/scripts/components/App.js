@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import TodoList from './TodoList';
 
 const DEFAULT_TODOS = [
   {
@@ -29,6 +30,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Header username="Jason" todoNumber={100} />
+        <TodoList todos={DEFAULT_TODOS} />
       </div>
     );
   }
