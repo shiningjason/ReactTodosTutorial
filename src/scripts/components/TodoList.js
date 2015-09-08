@@ -5,7 +5,7 @@ export default class TodoList extends React.Component {
   render() {
     const { todos } = this.props;
     const todoItems = todos.map((todo) => (
-      <li>
+      <li key={todo.id}>
         <TodoItem content={todo.content} completed={todo.completed} />
       </li>
     ));
