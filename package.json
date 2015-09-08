@@ -1,7 +1,7 @@
 {
   "name": "ReactTodosTutorial",
   "version": "0.0.0",
-  "description": "A React/Flux app generate by RF, powered with Babel",
+  "description": "這是 React 系列教學中的簡易範例 TodosApp",
   "main": "build/bundle.js",
   "dependencies": {
     "flux": "^2.1.1",
@@ -25,23 +25,26 @@
     "bootstrap-webpack": "*",
     "imports-loader": "*",
     "jquery": "*"
-},
+  },
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
     "dev": "webpack-dev-server --config webpack.dev.config.js --colors --content-base ./build",
     "test": "jest"
   },
-  "author": "",
-  "license": "",
+  "author": {
+    "name": "Jason Chung",
+    "email": "shiningjason1989@gmail.com"
+  },
+  "license": "MIT",
   "jest": {
     "scriptPreprocessor": "<rootDir>/preprocessor.js",
     "testFileExtensions": [
-    "js"
-],
+      "js"
+    ],
     "moduleFileExtensions": [
-    "js",
-    "json"
-],
+      "js",
+      "json"
+    ],
     "globals": {
       "SCRIPTS": "<rootDir>/src/scripts"
     },
