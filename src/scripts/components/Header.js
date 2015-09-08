@@ -11,3 +11,12 @@ export default class Header extends React.Component {
     );
   }
 }
+
+Header.propTypes = {
+  username: React.PropTypes.string,
+  todoNumber: React.PropTypes.number.isRequired
+};
+
+Header.defaultProps = {
+  username: '路人甲'
+};
