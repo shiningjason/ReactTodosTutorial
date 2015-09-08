@@ -1,0 +1,57 @@
+{
+  "name": "ReactTodosTutorial",
+  "version": "0.0.0",
+  "description": "A React/Flux app generate by RF, powered with Babel",
+  "main": "build/bundle.js",
+  "dependencies": {
+    "flux": "^2.0.3",
+    "object-assign": "^2.0.0",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "css-loader": "*",
+    "file-loader": "*",
+    "jest-cli": "*",
+    "react-hot-loader": "*",
+    "react-tools": "*",
+    "style-loader": "*",
+    "url-loader": "*",
+    "webpack-dev-server": "*",
+    "webpack": "*",
+    "babel-loader": "*",
+    "babel-jest": "*",
+    "node-sass": "*",
+    "sass-loader": "*",
+    "bootstrap": "*",
+    "bootstrap-webpack": "*",
+    "imports-loader": "*",
+    "jquery": "*"
+},
+  "scripts": {
+    "build": "webpack --config webpack.prod.config.js",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --colors --content-base ./build",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "",
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "testFileExtensions": [
+    "js"
+],
+    "moduleFileExtensions": [
+    "js",
+    "json"
+],
+    "globals": {
+      "SCRIPTS": "<rootDir>/src/scripts"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/node_modules/"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
+  }
+}
