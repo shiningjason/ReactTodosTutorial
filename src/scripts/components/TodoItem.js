@@ -2,10 +2,14 @@ import React from 'react';
 
 export default class TodoItem extends React.Component {
   render() {
-    const { content, completed } = this.props;
+    const { content, completed, onToggle } = this.props;
     return (
       <div style={styles.container}>
-        <input type="checkbox" style={styles.checkbox} checked={completed} />
+        <input
+          type="checkbox"
+          style={styles.checkbox}
+          checked={completed}
+          onChange={onToggle} />
         <label style={styles.content}>{content}</label>
       </div>
     );
@@ -14,7 +18,8 @@ export default class TodoItem extends React.Component {
 
 TodoItem.propTypes = {
   content: React.PropTypes.string.isRequired,
-  completed: React.PropTypes.bool.isRequired
+  completed: React.PropTypes.bool.isRequired,
+  onToggle: React.PropTypes.func.isRequired
 };
 
 const styles = {

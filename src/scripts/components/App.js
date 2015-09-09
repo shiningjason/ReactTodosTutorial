@@ -35,6 +35,12 @@ const _addTodo = (todos, content) => {
   return todos;
 };
 
+const _toggleTodo = (todos, id) => {
+  const todo = todos.find((todo) => todo.id === id);
+  todo.completed = !todo.completed;
+  return todos;
+};
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -48,6 +54,12 @@ export default class App extends React.Component {
     });
   }
 
+  handleToggleTodo(id) {
+    this.setState({
+      todos: _toggleTodo(this.state.todos, id)
+    });
+  }
+
   render() {
     return (
       <div style={styles.container}>
@@ -55,7 +67,9 @@ export default class App extends React.Component {
         <div style={styles.inputContainer}>
           <Input onSubmitEditing={this.handleAddTodo.bind(this)} />
         </div>
-        <TodoList todos={this.state.todos} />
+        <TodoList
+          todos={this.state.todos}
+          onToggle={this.handleToggleTodo.bind(this)} />
       </div>
     );
   }
