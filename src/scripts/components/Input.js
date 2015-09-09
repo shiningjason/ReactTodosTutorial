@@ -6,7 +6,7 @@ export default class Input extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = { value: props.defaultValue || '' };
   }
 
   handleChange(event) {
@@ -19,6 +19,9 @@ export default class Input extends React.Component {
         this.handleEnter(event);
         break;
     }
+
+    const { onKeyDown } = this.props;
+    onKeyDown && onKeyDown(event);
   }
 
   handleEnter(event) {
@@ -34,11 +37,12 @@ export default class Input extends React.Component {
   render() {
     return (
       <input
+        {...this.props}
         type="text"
-        style={styles.textField}
+        style={Object.assign({}, styles.textField, this.props.style)}
         value={this.state.value}
         onChange={this.handleChange.bind(this)}
-        onKeyDown={this.handleKeyDown.bind(this)}/>
+        onKeyDown={this.handleKeyDown.bind(this)} />
     );
   }
 }
