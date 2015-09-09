@@ -6,7 +6,7 @@ export default class Header extends React.Component {
     return (
       <header style={styles.container}>
         <h1 style={styles.title}>Todos</h1>
-        <p style={styles.subTitle}>哈囉，{username}：您今天有 {todoNumber} 條代辦事項！</p>
+        <p style={styles.subTitle}>哈囉，{username}：您今天有 {todoNumber} 條待辦事項！</p>
       </header>
     );
   }
