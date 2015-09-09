@@ -28,10 +28,19 @@ const DEFAULT_TODOS = [
 export default class App extends React.Component {
   render() {
     return (
-      <div>
+      <div style={styles.container}>
         <Header username="Jason" todoNumber={100} />
         <TodoList todos={DEFAULT_TODOS} />
       </div>
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: 550,
+    margin: '0 auto'
+  }
+};
