@@ -40,7 +40,7 @@ export default class TodoItem extends React.Component {
             this.toggleEditable();
           }}
           onKeyDown={(evt) => {
-            if (evt.keyCode) {
+            if (evt.keyCode === ESCAPE_KEY) {
               event.preventDefault();
               this.toggleEditable();
             }
