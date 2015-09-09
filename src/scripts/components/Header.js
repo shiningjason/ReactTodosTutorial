@@ -5,7 +5,7 @@ export default class Header extends React.Component {
     return (
       <header>
         <h1>Todos</h1>
-        <p>哈囉，Jason：您今天有 100 條代辦事項！</p>
+        <p>哈囉，Jason：您今天有 100 條待辦事項！</p>
       </header>
     );
   }
