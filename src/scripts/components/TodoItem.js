@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class TodoItem extends React.Component {
   render() {
-    const { content, completed, onToggle } = this.props;
+    const { content, completed, onToggle, onDelete } = this.props;
     return (
       <div style={styles.container}>
         <input
@@ -14,6 +14,9 @@ export default class TodoItem extends React.Component {
           style={Object.assign({}, styles.content, completed && styles.completed)}>
           {content}
         </label>
+        <button
+          style={styles.deleteBtn}
+          onClick={onDelete}>X</button>
       </div>
     );
   }
@@ -22,7 +25,8 @@ export default class TodoItem extends React.Component {
 TodoItem.propTypes = {
   content: React.PropTypes.string.isRequired,
   completed: React.PropTypes.bool.isRequired,
-  onToggle: React.PropTypes.func.isRequired
+  onToggle: React.PropTypes.func.isRequired,
+  onDelete: React.PropTypes.func.isRequired
 };
 
 const styles = {
@@ -36,6 +40,7 @@ const styles = {
     marginLeft: 16
   },
   content: {
+    flex: 1,
     color: 'rgba(0,0,0,0.87)'
   },
   completed: {
@@ -43,5 +48,14 @@ const styles = {
     fontWeight: 'lighter',
     color: 'rgba(0,0,0,0.54)',
     textDecoration: 'line-through'
+  },
+  deleteBtn: {
+    border: 0,
+    background: 'transparent',
+    marginRight: 16,
+    marginLeft: 16,
+    paddingRight: 8,
+    paddingLeft: 8,
+    color: '#ff4081'
   }
 };

@@ -41,6 +41,12 @@ const _toggleTodo = (todos, id) => {
   return todos;
 };
 
+const _deleteTodo = (todos, id) => {
+  const idx = todos.findIndex((todo) => todo.id === id);
+  todos.splice(idx, 1);
+  return todos;
+};
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -60,6 +66,12 @@ export default class App extends React.Component {
     });
   }
 
+  handleDeleteTodo(id) {
+    this.setState({
+      todos: _deleteTodo(this.state.todos, id)
+    });
+  }
+
   render() {
     return (
       <div style={styles.container}>
@@ -69,7 +81,8 @@ export default class App extends React.Component {
         </div>
         <TodoList
           todos={this.state.todos}
-          onToggle={this.handleToggleTodo.bind(this)} />
+          onToggle={this.handleToggleTodo.bind(this)}
+          onDelete={this.handleDeleteTodo.bind(this)} />
       </div>
     );
   }
