@@ -10,7 +10,10 @@ export default class TodoItem extends React.Component {
           style={styles.checkbox}
           checked={completed}
           onChange={onToggle} />
-        <label style={styles.content}>{content}</label>
+        <label
+          style={Object.assign({}, styles.content, completed && styles.completed)}>
+          {content}
+        </label>
       </div>
     );
   }
@@ -34,5 +37,11 @@ const styles = {
   },
   content: {
     color: 'rgba(0,0,0,0.87)'
+  },
+  completed: {
+    fontStyle: 'italic',
+    fontWeight: 'lighter',
+    color: 'rgba(0,0,0,0.54)',
+    textDecoration: 'line-through'
   }
 };
