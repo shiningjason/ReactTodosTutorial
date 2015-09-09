@@ -4,9 +4,9 @@ export default class Header extends React.Component {
   render() {
     const { username, todoNumber } = this.props;
     return (
-      <header>
-        <h1>Todos</h1>
-        <p>哈囉，{username}：您今天有 {todoNumber} 條代辦事項！</p>
+      <header style={styles.container}>
+        <h1 style={styles.title}>Todos</h1>
+        <p style={styles.subTitle}>哈囉，{username}：您今天有 {todoNumber} 條代辦事項！</p>
       </header>
     );
   }
@@ -19,4 +19,23 @@ Header.propTypes = {
 
 Header.defaultProps = {
   username: '路人甲'
+};
+
+const styles = {
+  container: {
+    paddingTop: 24,
+    paddingBottom: 24,
+    paddingRight: 16,
+    paddingLeft: 16
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 48,
+    paddingBottom: 31
+  },
+  subTitle: {
+    fontWeight: 'lighter',
+    fontSize: 17,
+    color: 'rgba(0,0,0,0.54)'
+  }
 };
