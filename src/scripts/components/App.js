@@ -48,6 +48,12 @@ const _deleteTodo = (todos, id) => {
   return todos;
 };
 
+const _editTodo = (todos, id, content) => {
+  const todo = todos.find((todo) => todo.id === id);
+  todo.content = content;
+  return todos;
+};
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -73,6 +79,12 @@ export default class App extends React.Component {
     });
   }
 
+  handleEditTodo(id, content) {
+    this.setState({
+      todos: _editTodo(this.state.todos, id, content)
+    });
+  }
+
   render() {
     return (
       <div style={styles.container}>
@@ -83,6 +95,7 @@ export default class App extends React.Component {
         <TodoList
           todos={this.state.todos}
           onToggle={this.handleToggleTodo.bind(this)}
+          onEdit={this.handleEditTodo.bind(this)}
           onDelete={this.handleDeleteTodo.bind(this)} />
       </div>
     );

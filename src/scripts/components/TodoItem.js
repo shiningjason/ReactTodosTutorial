@@ -25,7 +25,7 @@ export default class TodoItem extends React.Component {
   }
 
   render() {
-    const { content, completed, onToggle, onDelete } = this.props;
+    const { content, completed, onToggle, onEdit, onDelete } = this.props;
 
     if (this.state.editable) {
       return (
@@ -34,9 +34,12 @@ export default class TodoItem extends React.Component {
           style={styles.editField}
           defaultValue={content}
           onSubmitEditing={(content) => {
+            if (content !== '') onEdit(content);
             this.toggleEditable();
           }}
-          onBlur={() => {
+          onBlur={(event) => {
+            const content = event.target.value;
+            if (content !== '') onEdit(content);
             this.toggleEditable();
           }}
           onKeyDown={(evt) => {
@@ -72,6 +75,7 @@ TodoItem.propTypes = {
   content: React.PropTypes.string.isRequired,
   completed: React.PropTypes.bool.isRequired,
   onToggle: React.PropTypes.func.isRequired,
+  onEdit: React.PropTypes.func.isRequired,
   onDelete: React.PropTypes.func.isRequired
 };
 

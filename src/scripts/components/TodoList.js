@@ -3,13 +3,14 @@ import TodoItem from './TodoItem';
 
 export default class TodoList extends React.Component {
   render() {
-    const { todos, onToggle, onDelete } = this.props;
+    const { todos, onToggle, onEdit, onDelete } = this.props;
     const todoItems = todos.map((todo) => (
       <li key={todo.id} style={styles.todoItem}>
         <TodoItem
           content={todo.content}
           completed={todo.completed}
           onToggle={() => onToggle(todo.id)}
+          onEdit={(content) => onEdit(todo.id, content)}
           onDelete={() => onDelete(todo.id)} />
       </li>
     ));
@@ -25,6 +26,7 @@ export default class TodoList extends React.Component {
 TodoList.propTypes = {
   todos: React.PropTypes.array.isRequired,
   onToggle: React.PropTypes.func.isRequired,
+  onEdit: React.PropTypes.func.isRequired,
   onDelete: React.PropTypes.func.isRequired
 };
 
