@@ -1,26 +1,27 @@
 import React from 'react';
+import shortid from 'shortid';
 import Header from './Header';
 import Input from './Input';
 import TodoList from './TodoList';
 
 const DEFAULT_TODOS = [
   {
-    id: 1,
+    id: shortid(),
     content: '準備 React & Flux 教育訓練',
     completed: false
   },
   {
-    id: 2,
+    id: shortid(),
     content: '繳電話費',
     completed: false
   },
   {
-    id: 3,
+    id: shortid(),
     content: '繳房租',
     completed: false
   },
   {
-    id: 4,
+    id: shortid(),
     content: '週會會議記錄',
     completed: true
   }
@@ -28,7 +29,7 @@ const DEFAULT_TODOS = [
 
 const _addTodo = (todos, content) => {
   todos.push({
-    id: todos.length + 1,
+    id: shortid(),
     content,
     completed: false
   });

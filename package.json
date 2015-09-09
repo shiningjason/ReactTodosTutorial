@@ -5,7 +5,8 @@
   "main": "build/bundle.js",
   "dependencies": {
     "flux": "^2.1.1",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "shortid": "^2.2.2"
   },
   "devDependencies": {
     "css-loader": "*",
