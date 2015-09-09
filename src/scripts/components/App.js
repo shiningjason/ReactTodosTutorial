@@ -26,15 +26,36 @@ const DEFAULT_TODOS = [
   }
 ];
 
+const _addTodo = (todos, content) => {
+  todos.push({
+    id: todos.length + 1,
+    content,
+    completed: false
+  });
+  return todos;
+};
+
 export default class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { todos: DEFAULT_TODOS };
+  }
+
+  handleAddTodo(content) {
+    this.setState({
+      todos: _addTodo(this.state.todos, content)
+    });
+  }
+
   render() {
     return (
       <div style={styles.container}>
         <Header username="Jason" todoNumber={100} />
         <div style={styles.inputContainer}>
-          <Input />
+          <Input onSubmitEditing={this.handleAddTodo.bind(this)} />
         </div>
-        <TodoList todos={DEFAULT_TODOS} />
+        <TodoList todos={this.state.todos} />
       </div>
     );
   }
