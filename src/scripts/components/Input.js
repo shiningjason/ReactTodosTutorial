@@ -1,5 +1,7 @@
 import React from 'react';
 
+const ENTER_KEY = 13;
+
 export default class Input extends React.Component {
 
   constructor(props) {
@@ -11,13 +13,32 @@ export default class Input extends React.Component {
     this.setState({ value: event.target.value });
   }
 
+  handleKeyDown(event) {
+    switch (event.keyCode) {
+      case ENTER_KEY:
+        this.handleEnter(event);
+        break;
+    }
+  }
+
+  handleEnter(event) {
+    event.preventDefault();
+
+    const { onSubmitEditing } = this.props;
+    if (onSubmitEditing) {
+      onSubmitEditing(this.state.value);
+      this.setState({ value: '' });
+    }
+  }
+
   render() {
     return (
       <input
         type="text"
         style={styles.textField}
         value={this.state.value}
-        onChange={this.handleChange.bind(this)} />
+        onChange={this.handleChange.bind(this)}
+        onKeyDown={this.handleKeyDown.bind(this)}/>
     );
   }
 }
