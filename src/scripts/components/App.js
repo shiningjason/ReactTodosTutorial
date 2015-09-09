@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Input from './Input';
 import TodoList from './TodoList';
 
 const DEFAULT_TODOS = [
@@ -30,6 +31,9 @@ export default class App extends React.Component {
     return (
       <div style={styles.container}>
         <Header username="Jason" todoNumber={100} />
+        <div style={styles.inputContainer}>
+          <Input />
+        </div>
         <TodoList todos={DEFAULT_TODOS} />
       </div>
     );
@@ -42,5 +46,10 @@ const styles = {
     flexDirection: 'column',
     maxWidth: 550,
     margin: '0 auto'
+  },
+  inputContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginBottom: 8
   }
 };
