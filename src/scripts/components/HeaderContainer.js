@@ -8,7 +8,7 @@ export default class HeaderContainer extends React.Component {
     super(props);
 
     const getTodoNumberState = () => ({
-      todoNumber: TodoStore.getAll().filter((todo) => !todo.completed).length
+      todoNumber: TodoStore.getAll().count((todo) => !todo.completed)
     });
 
     this.state = getTodoNumberState();

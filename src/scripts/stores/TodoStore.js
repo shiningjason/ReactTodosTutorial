@@ -1,66 +1,49 @@
 import { EventEmitter } from 'events';
 import update from 'react/lib/update';
+import Immutable from 'immutable';
 import shortid from 'shortid';
 import ActionTypes from '../constants/ActionTypes';
 import AppDispatcher from '../dispatcher/AppDispatcher';
 
 const CHANGE_EVENT = 'change';
+
+const TodoRecord = Immutable.Record({
+  id: undefined,
+  content: undefined,
+  completed: false
+});
+
+const createTodoRecord = (todo) => new TodoRecord({
+  id: shortid(),
+  content: todo.content,
+  completed: todo.completed || false
+});
+
 const DEFAULT_TODOS = [
-  {
-    id: shortid(),
-    content: '準備 React & Flux 教育訓練',
-    completed: false
-  },
-  {
-    id: shortid(),
-    content: '繳電話費',
-    completed: false
-  },
-  {
-    id: shortid(),
-    content: '繳房租',
-    completed: false
-  },
-  {
-    id: shortid(),
-    content: '週會會議記錄',
-    completed: true
-  }
-];
+  { content: '準備 React & Flux 教育訓練' },
+  { content: '繳電話費' },
+  { content: '繳房租' },
+  { content: '週會會議記錄', completed: true }
+].map(createTodoRecord);
 
 const _addTodo = (todos, content) => {
-  return update(todos, {
-    $push: [{
-      id: shortid(),
-      content,
-      completed: false
-    }]
-  });
+  return todos.push(createTodoRecord({ content }));
 };
 
 const _toggleTodo = (todos, id) => {
-  const idx = todos.findIndex((todo) => todo.id === id);
-  return update(todos, {
-    [idx]: {
-      completed: { $set: !todos[idx].completed }
-    }
-  });
+  return todos.update(
+    todos.findIndex((todo) => todo.id === id),
+    (todo) => todo.set('completed', !todo.completed))
 };
 
 const _deleteTodo = (todos, id) => {
-  const idx = todos.findIndex((todo) => todo.id === id);
-  return update(todos, {
-    $splice: [[idx, 1]]
-  });
+  return todos.delete(todos.findIndex((todo) => todo.id === id));
 };
 
 const _editTodo = (todos, id, content) => {
-  const idx = todos.findIndex((todo) => todo.id === id);
-  return update(todos, {
-    [idx]: {
-      content: { $set: content }
-    }
-  });
+  return todos.update(
+    todos.findIndex((todo) => todo.id === id),
+    (todo) => todo.set('content', content))
 };
 
 const TodoStore = {
@@ -83,7 +66,7 @@ const TodoStore = {
   }
 };
 
-var _todos = DEFAULT_TODOS;
+var _todos = Immutable.List(DEFAULT_TODOS);
 
 AppDispatcher.register((action) => {
   switch (action.type) {

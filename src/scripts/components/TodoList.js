@@ -1,4 +1,5 @@
 import React from 'react';
+import Immutable from 'immutable';
 import TodoItem from './TodoItem';
 
 export default class TodoList extends React.Component {
@@ -24,7 +25,7 @@ export default class TodoList extends React.Component {
 }
 
 TodoList.propTypes = {
-  todos: React.PropTypes.array.isRequired,
+  todos: React.PropTypes.instanceOf(Immutable.List).isRequired,
   onToggle: React.PropTypes.func.isRequired,
   onEdit: React.PropTypes.func.isRequired,
   onDelete: React.PropTypes.func.isRequired
