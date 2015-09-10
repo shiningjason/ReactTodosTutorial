@@ -8,6 +8,6 @@
 
 ## 你可以在這階段學習
 ### Flux
-1. [Flux](http://facebook.github.io/flux/docs/overview.html)
+- [Flux Overview](http://facebook.github.io/flux/docs/overview.html)
 ![Flux 架構圖](http://blog.krawaller.se/img/flux-diagram.png)
-2. [Dispatcher](http://facebook.github.io/flux/docs/dispatcher.html)
+- [Dispatcher](http://facebook.github.io/flux/docs/dispatcher.html)
