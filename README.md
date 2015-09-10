@@ -8,6 +8,6 @@
 
 
 ## 你可以在這階段學習
-1. [Immutability Helper](https://facebook.github.io/react/docs/update.html)
-2. [Immutable-js to the rescue](https://facebook.github.io/react/docs/advanced-performance.html#immutable-js-to-the-rescue)
-3. [Immutable.js](https://facebook.github.io/immutable-js/)
+- [Immutability Helper](https://facebook.github.io/react/docs/update.html)
+- [Immutable-js to the rescue](https://facebook.github.io/react/docs/advanced-performance.html#immutable-js-to-the-rescue)
+- [Immutable.js](https://facebook.github.io/immutable-js/)
