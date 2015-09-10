@@ -8,8 +8,10 @@
 
 ## 你可以在這階段學習
 ### Redux
-1. [Action](https://github.com/rackt/redux/blob/master/docs/basics/Actions.md)
+- [Action](https://github.com/rackt/redux/blob/master/docs/basics/Actions.md)
+
 > [簡中版文件](https://github.com/camsong/redux-in-chinese/blob/master/docs/basics/Actions.md)
+
 ```js
 export const addTodo = (content) => ({
   type: ADD_TODO,
@@ -19,4 +21,4 @@ export const addTodo = (content) => ({
 
 
 ## 你或許還會想看
-1. [Async Actions](https://github.com/rackt/redux/blob/master/docs/advanced/AsyncActions.md)
+- [Async Actions](https://github.com/rackt/redux/blob/master/docs/advanced/AsyncActions.md)
