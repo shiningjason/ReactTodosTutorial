@@ -28,4 +28,4 @@ yo rf ReactTodosApp
 ```
 cd ReactTodosApp && npm run dev
 ```
-然後，開啟 http://localhost:8080 看看結果吧！
+然後，開啟 [http://localhost:8080](http://localhost:8080) 看看結果吧！
