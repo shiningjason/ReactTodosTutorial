@@ -21,4 +21,4 @@
 
 ## 你可以在這階段學習
 ### Flux
-1. [Best practices | Containers](http://facebook.github.io/flux/docs/flux-utils.html#containers)
+- [Best practices | Containers](http://facebook.github.io/flux/docs/flux-utils.html#containers)
