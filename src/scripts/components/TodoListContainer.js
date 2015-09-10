@@ -1,23 +1,19 @@
 import React from 'react';
+import { Container } from 'flux/utils';
 import TodoList from './TodoList';
 import TodoStore from '../stores/TodoStore';
 import { toggleTodo, editTodo, deleteTodo } from '../actions/TodoActions';
 
-const getTodoState = () => ({ todos: TodoStore.getState() });
+class TodoListContainer extends React.Component {
 
-export default class TodoListContainer extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = getTodoState();
+  static getStores() {
+    return [ TodoStore ];
   }
 
-  componentDidMount() {
-    this._changeListener = TodoStore.addListener(() => this.setState(getTodoState()));
-  }
-
-  componentWillUnmount() {
-    this._changeListener.remove();
+  static calculateState() {
+    return {
+      todos: TodoStore.getState()
+    };
   }
 
   render() {
@@ -31,3 +27,5 @@ export default class TodoListContainer extends React.Component {
     );
   }
 }
+
+export default Container.create(TodoListContainer);
