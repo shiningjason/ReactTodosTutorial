@@ -30,5 +30,5 @@ React.render((
   <Provider store={store}>
     {() => <App />}
   </Provider>
-), targetEl)
+), document.getElementById('main'));
 ```
