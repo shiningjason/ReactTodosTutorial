@@ -8,5 +8,5 @@
 
 ## 你可以在這階段學習
 ### Flux
-1. [Creating Store](http://facebook.github.io/flux/docs/todo-list.html#creating-stores)
-2. [Best practices | Store](http://facebook.github.io/flux/docs/flux-utils.html#stores)
+- [Creating Store](http://facebook.github.io/flux/docs/todo-list.html#creating-stores)
+- [Best practices | Store](http://facebook.github.io/flux/docs/flux-utils.html#stores)
