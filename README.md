@@ -9,8 +9,10 @@
 
 ## 你可以在這階段學習
 ### Redux
-1. [Store](https://github.com/rackt/redux/blob/master/docs/basics/Store.md)
+- [Store](https://github.com/rackt/redux/blob/master/docs/basics/Store.md)
+
 > [簡中版文件](https://github.com/camsong/redux-in-chinese/blob/master/docs/basics/Store.md)
+
 ```js
 import { combineReducers, createStore } from 'redux';
 import * as reducers from './reducers';
@@ -18,7 +20,7 @@ import * as reducers from './reducers';
 const composedReducer = combineReducers(reducers);
 const store = createStore(composedReducer);
 ```
-2. [Injecting Redux Store to React Component](https://github.com/rackt/react-redux#injecting-redux-store)
+- [Injecting Redux Store to React Component](https://github.com/rackt/react-redux#injecting-redux-store)
 ```js
 import { Provider } from 'react-redux';
 
