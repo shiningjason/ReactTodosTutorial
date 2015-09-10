@@ -9,14 +9,13 @@
 
 ## 你可以在這階段學習
 ### ES6
-1. [Classes](https://babeljs.io/docs/learn-es2015/#classes)
+- [Classes](https://babeljs.io/docs/learn-es2015/#classes)
 ```js
 class Header extends React.Component {
   // ...
 }
 ```
-
-2. [Modules](https://babeljs.io/docs/learn-es2015/#modules)
+- [Modules](https://babeljs.io/docs/learn-es2015/#modules)
 ```js
 // Header.js
 export default class Header {}
@@ -26,8 +25,8 @@ import Header from './Header';
 ```
 
 ### React
-1. [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html)
-2. [Component Specs: render](https://facebook.github.io/react/docs/component-specs.html#render)
+- [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html)
+- [Component Specs: render](https://facebook.github.io/react/docs/component-specs.html#render)
 ```js
 class Header extends React.Component {
   render() {
