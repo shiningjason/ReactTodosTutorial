@@ -11,10 +11,10 @@
 
 ## 你可以在這階段學習
 ### CSS
-1. [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### React
-1. [Inline Styles](https://facebook.github.io/react/tips/inline-styles.html)
+- [Inline Styles](https://facebook.github.io/react/tips/inline-styles.html)
 ```js
 class App extends React.Component {
   render() {
@@ -35,8 +35,8 @@ const styles = {
 
 
 ## 你或許會用到或想看到的東西
-1. [Radium](https://github.com/FormidableLabs/radium)
-2. [react-style](https://github.com/js-next/react-style)
-3. [CSS Modules](https://github.com/css-modules/css-modules)
-4. [關於 CSS Modules 的文章](http://glenmaddern.com/articles/css-modules)
+- [Radium](https://github.com/FormidableLabs/radium)
+- [react-style](https://github.com/js-next/react-style)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [關於 CSS Modules 的文章](http://glenmaddern.com/articles/css-modules)
 
