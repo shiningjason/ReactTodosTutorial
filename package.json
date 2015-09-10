@@ -8,6 +8,8 @@
     "flux-constants": "^0.2.2",
     "immutable": "^3.7.5",
     "react": "^0.13.3",
+    "react-redux": "^2.1.1",
+    "redux": "^2.0.0",
     "shortid": "^2.2.2"
   },
   "devDependencies": {
