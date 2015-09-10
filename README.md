@@ -1,4 +1,4 @@
-# Flux / Level 1. Dispatcher
+# Level 7. Flux / Dispatcher
 這是 React 系列教學中的簡易範例 TodosApp
 
 
