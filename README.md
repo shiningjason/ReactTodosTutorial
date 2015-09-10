@@ -12,6 +12,18 @@
 ### JS
 1. [Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
+### ES6
+1. [Enhanced Object Literals](https://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
+```js
+const content = 'hello';
+
+const todo = {
+  id: 1,
+  content, // 這是 `content: content` 的簡寫
+  completed: false
+};
+```
+
 ### React
 1. [Components are Just State Machines](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html#components-are-just-state-machines)
 2. [Controlled Components](https://facebook.github.io/react/docs/forms.html#controlled-components)
