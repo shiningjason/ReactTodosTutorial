@@ -10,7 +10,19 @@ export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { todos: TodoStore.getAll() };
+
+    const getTodoState = () => ({ todos: TodoStore.getAll() });
+
+    this.state = getTodoState();
+    this.onChange = () => this.setState(getTodoState());
+  }
+
+  componentDidMount() {
+    TodoStore.addChangeListener(this.onChange);
+  }
+
+  componentWillUnmount() {
+    TodoStore.removeChangeListener(this.onChange);
   }
 
   render() {
