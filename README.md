@@ -9,12 +9,12 @@
 
 ## 你可以在這階段學習
 ### ES6
-1. [Const](https://babeljs.io/docs/learn-es2015/#let-const)
+- [Const](https://babeljs.io/docs/learn-es2015/#let-const)
 ```js
 const content = 'hello, es6';
 ```
 
-2. [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
+- [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
 ```js
 // es6
 const { username, todoNumber } = this.props;
@@ -25,8 +25,8 @@ var todoNumber = this.props.todoNumber;
 ```
 
 ### React
-1. [Prop Validation](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)
-2. [Default Prop Values](https://facebook.github.io/react/docs/reusable-components.html#default-prop-values)
+- [Prop Validation](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)
+- [Default Prop Values](https://facebook.github.io/react/docs/reusable-components.html#default-prop-values)
 ```js
 class Header extends React.Component {
   // ...
