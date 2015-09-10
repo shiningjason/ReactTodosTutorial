@@ -1,7 +1,7 @@
 import React from 'react';
 import shortid from 'shortid';
 import HeaderContainer from './HeaderContainer';
-import Input from './Input';
+import AddTodoInputContainer from './AddTodoInputContainer';
 import TodoList from './TodoList';
 import * as TodoActions from '../actions/TodoActions';
 import TodoStore from '../stores/TodoStore';
@@ -30,7 +30,7 @@ export default class App extends React.Component {
       <div style={styles.container}>
         <HeaderContainer username="Jason" />
         <div style={styles.inputContainer}>
-          <Input onSubmitEditing={TodoActions.addTodo} />
+          <AddTodoInputContainer />
         </div>
         <TodoList
           todos={this.state.todos}
