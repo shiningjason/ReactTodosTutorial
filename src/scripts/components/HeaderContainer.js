@@ -2,25 +2,23 @@ import React from 'react';
 import Header from './Header';
 import TodoStore from '../stores/TodoStore';
 
+const getTodoNumberState = () => ({
+  todoNumber: TodoStore.getState().count((todo) => !todo.completed)
+});
+
 export default class HeaderContainer extends React.Component {
 
   constructor(props) {
     super(props);
-
-    const getTodoNumberState = () => ({
-      todoNumber: TodoStore.getAll().count((todo) => !todo.completed)
-    });
-
     this.state = getTodoNumberState();
-    this.onChange = () => this.setState(getTodoNumberState());
   }
 
   componentDidMount() {
-    TodoStore.addChangeListener(this.onChange);
+    this._changeListener = TodoStore.addListener(() => this.setState(getTodoNumberState()));
   }
 
   componentWillUnmount() {
-    TodoStore.removeChangeListener(this.onChange);
+    this._changeListener.remove();
   }
 
   render() {

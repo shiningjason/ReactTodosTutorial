@@ -1,11 +1,8 @@
-import { EventEmitter } from 'events';
-import update from 'react/lib/update';
+import { ReduceStore } from 'flux/utils';
 import Immutable from 'immutable';
 import shortid from 'shortid';
 import ActionTypes from '../constants/ActionTypes';
 import AppDispatcher from '../dispatcher/AppDispatcher';
-
-const CHANGE_EVENT = 'change';
 
 const TodoRecord = Immutable.Record({
   id: undefined,
@@ -46,50 +43,27 @@ const _editTodo = (todos, id, content) => {
     (todo) => todo.set('content', content))
 };
 
-const TodoStore = {
-  ...EventEmitter.prototype,
+class TodoStore extends ReduceStore {
 
-  getAll() {
-    return _todos;
-  },
-
-  emitChange() {
-    this.emit(CHANGE_EVENT);
-  },
-
-  addChangeListener(callback) {
-    this.on(CHANGE_EVENT, callback);
-  },
-
-  removeChangeListener(callback) {
-    this.removeListener(CHANGE_EVENT, callback);
+  getInitialState() {
+    return Immutable.List(DEFAULT_TODOS);
   }
-};
 
-var _todos = Immutable.List(DEFAULT_TODOS);
+  reduce(state, action) {
+    switch (action.type) {
+      case ActionTypes.ADD_TODO:
+        return _addTodo(state, action.content);
+ 
+      case ActionTypes.EDIT_TODO:
+        return _editTodo(state, action.id, action.content);
 
-AppDispatcher.register((action) => {
-  switch (action.type) {
-    case ActionTypes.ADD_TODO:
-      _todos = _addTodo(_todos, action.content);
-      TodoStore.emitChange();
-      break;
+      case ActionTypes.TOGGLE_TODO:
+        return _toggleTodo(state, action.id);
 
-    case ActionTypes.EDIT_TODO:
-      _todos = _editTodo(_todos, action.id, action.content);
-      TodoStore.emitChange();
-      break;
-
-    case ActionTypes.TOGGLE_TODO:
-      _todos = _toggleTodo(_todos, action.id);
-      TodoStore.emitChange();
-      break;
-
-    case ActionTypes.DELETE_TODO:
-      _todos = _deleteTodo(_todos, action.id);
-      TodoStore.emitChange();
-      break;
+      case ActionTypes.DELETE_TODO:
+        return _deleteTodo(state, action.id);
+    }
   }
-});
+}
 
-export default TodoStore;
+export default new TodoStore(AppDispatcher);
