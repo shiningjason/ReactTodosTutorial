@@ -8,4 +8,4 @@
 
 
 ## 你可以在這階段學習
-1. [Flux Utils](http://facebook.github.io/flux/docs/flux-utils.html)
+- [Flux Utils](http://facebook.github.io/flux/docs/flux-utils.html)
