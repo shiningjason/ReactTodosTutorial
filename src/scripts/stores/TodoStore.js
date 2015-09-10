@@ -1,4 +1,5 @@
 import { EventEmitter } from 'events';
+import update from 'react/lib/update';
 import shortid from 'shortid';
 import ActionTypes from '../constants/ActionTypes';
 import AppDispatcher from '../dispatcher/AppDispatcher';
@@ -28,30 +29,38 @@ const DEFAULT_TODOS = [
 ];
 
 const _addTodo = (todos, content) => {
-  todos.push({
-    id: shortid(),
-    content,
-    completed: false
+  return update(todos, {
+    $push: [{
+      id: shortid(),
+      content,
+      completed: false
+    }]
   });
-  return todos;
 };
 
 const _toggleTodo = (todos, id) => {
-  const todo = todos.find((todo) => todo.id === id);
-  todo.completed = !todo.completed;
-  return todos;
+  const idx = todos.findIndex((todo) => todo.id === id);
+  return update(todos, {
+    [idx]: {
+      completed: { $set: !todos[idx].completed }
+    }
+  });
 };
 
 const _deleteTodo = (todos, id) => {
   const idx = todos.findIndex((todo) => todo.id === id);
-  todos.splice(idx, 1);
-  return todos;
+  return update(todos, {
+    $splice: [[idx, 1]]
+  });
 };
 
 const _editTodo = (todos, id, content) => {
-  const todo = todos.find((todo) => todo.id === id);
-  todo.content = content;
-  return todos;
+  const idx = todos.findIndex((todo) => todo.id === id);
+  return update(todos, {
+    [idx]: {
+      content: { $set: content }
+    }
+  });
 };
 
 const TodoStore = {
