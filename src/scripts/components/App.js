@@ -3,29 +3,7 @@ import shortid from 'shortid';
 import Header from './Header';
 import Input from './Input';
 import TodoList from './TodoList';
-
-const DEFAULT_TODOS = [
-  {
-    id: shortid(),
-    content: '準備 React & Flux 教育訓練',
-    completed: false
-  },
-  {
-    id: shortid(),
-    content: '繳電話費',
-    completed: false
-  },
-  {
-    id: shortid(),
-    content: '繳房租',
-    completed: false
-  },
-  {
-    id: shortid(),
-    content: '週會會議記錄',
-    completed: true
-  }
-];
+import TodoStore from '../stores/TodoStore';
 
 const _addTodo = (todos, content) => {
   todos.push({
@@ -58,7 +36,7 @@ export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { todos: DEFAULT_TODOS };
+    this.state = { todos: TodoStore.getAll() };
   }
 
   handleAddTodo(content) {
