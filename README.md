@@ -10,23 +10,21 @@
 
 ## 你可以在這階段學習
 ### ES6
-1. [Array.prototype.find()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [Array.prototype.find()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 ```
 const array = [1, 2, 3, 4, 5, 6];
 
 cosnt result = array.find((ele) => ele === 1);
 console.log(result); // 1
 ```
-
-2. [Array.prototype.findIndex()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+- [Array.prototype.findIndex()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 ```
 const array = [1, 2, 3, 4, 5, 6];
 
 cosnt result = array.findIndex((ele) => ele === 1);
 console.log(result); // 0
 ```
-
-3. [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+- [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 ```
 const a = { text: 'a say hello', a: 'a' };
 const b = { text: 'b say hello', b: 'b' };
@@ -36,10 +34,10 @@ console.log(c); // { text: 'b say hello', a: 'a', b: 'b' }
 ```
 
 ### React
-1. [React Dev Tools](https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html)
-2. [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
+- [React Dev Tools](https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html)
+- [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
 ![Component Lifecycle](http://i.imgur.com/aAMi0NH.jpg)
-3. [The ref String Attribute](https://facebook.github.io/react/docs/more-about-refs.html#the-ref-string-attribute)
+- [The ref String Attribute](https://facebook.github.io/react/docs/more-about-refs.html#the-ref-string-attribute)
 ```js
 class Input extends React.Component {
   componentDidUpdate() {
@@ -51,13 +49,13 @@ class Input extends React.Component {
   }
 }
 ```
-4. [Transferring Props](https://facebook.github.io/react/docs/transferring-props.html)
+- [Transferring Props](https://facebook.github.io/react/docs/transferring-props.html)
 ```js
 <Input {...this.props} more="values" />
 ```
 
 ### 其他
-1. 使用 [shortid](https://github.com/dylang/shortid) 生成短且唯一的 key
+- 使用 [shortid](https://github.com/dylang/shortid) 生成短且唯一的 key
 ```js
 import shortid from 'shortid';
 
