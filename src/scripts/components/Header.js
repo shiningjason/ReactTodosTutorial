@@ -1,6 +1,16 @@
 import React from 'react';
 
 export default class Header extends React.Component {
+
+  static propTypes = {
+    username: React.PropTypes.string,
+    todoNumber: React.PropTypes.number.isRequired
+  };
+
+  static defaultProps = {
+    username: '路人甲'
+  };
+
   render() {
     const { username, todoNumber } = this.props;
     return (
@@ -11,15 +21,6 @@ export default class Header extends React.Component {
     );
   }
 }
-
-Header.propTypes = {
-  username: React.PropTypes.string,
-  todoNumber: React.PropTypes.number.isRequired
-};
-
-Header.defaultProps = {
-  username: '路人甲'
-};
 
 const styles = {
   container: {

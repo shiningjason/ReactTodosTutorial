@@ -5,6 +5,14 @@ const ESCAPE_KEY = 27;
 
 export default class TodoItem extends React.Component {
 
+  static propTypes = {
+    content: React.PropTypes.string.isRequired,
+    completed: React.PropTypes.bool.isRequired,
+    onToggle: React.PropTypes.func.isRequired,
+    onEdit: React.PropTypes.func.isRequired,
+    onDelete: React.PropTypes.func.isRequired
+  };
+
   constructor(props) {
     super(props);
     this.state = { editable: false };
@@ -70,14 +78,6 @@ export default class TodoItem extends React.Component {
     );
   }
 }
-
-TodoItem.propTypes = {
-  content: React.PropTypes.string.isRequired,
-  completed: React.PropTypes.bool.isRequired,
-  onToggle: React.PropTypes.func.isRequired,
-  onEdit: React.PropTypes.func.isRequired,
-  onDelete: React.PropTypes.func.isRequired
-};
 
 const styles = {
   container: {
