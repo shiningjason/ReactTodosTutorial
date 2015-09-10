@@ -1,24 +1,18 @@
 import React from 'react';
+import { Container } from 'flux/utils';
 import Header from './Header';
 import TodoStore from '../stores/TodoStore';
 
-const getTodoNumberState = () => ({
-  todoNumber: TodoStore.getState().count((todo) => !todo.completed)
-});
+class HeaderContainer extends React.Component {
 
-export default class HeaderContainer extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = getTodoNumberState();
+  static getStores() {
+    return [ TodoStore ];
   }
 
-  componentDidMount() {
-    this._changeListener = TodoStore.addListener(() => this.setState(getTodoNumberState()));
-  }
-
-  componentWillUnmount() {
-    this._changeListener.remove();
+  static calculateState() {
+    return {
+      todoNumber: TodoStore.getState().count((todo) => !todo.completed)
+    }
   }
 
   render() {
@@ -27,3 +21,5 @@ export default class HeaderContainer extends React.Component {
     );
   }
 }
+
+export default Container.create(HeaderContainer);
