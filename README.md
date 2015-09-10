@@ -13,7 +13,6 @@
 ```js
 const content = 'hello, es6';
 ```
-
 - [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
 ```js
 // es6
