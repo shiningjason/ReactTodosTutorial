@@ -1,6 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
-import Header from './Header';
+import HeaderContainer from './HeaderContainer';
 import Input from './Input';
 import TodoList from './TodoList';
 import * as TodoActions from '../actions/TodoActions';
@@ -28,7 +28,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div style={styles.container}>
-        <Header username="Jason" todoNumber={100} />
+        <HeaderContainer username="Jason" />
         <div style={styles.inputContainer}>
           <Input onSubmitEditing={TodoActions.addTodo} />
         </div>
