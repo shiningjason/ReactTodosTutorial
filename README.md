@@ -8,7 +8,7 @@
 
 ## 你可以在這階段學習
 ### ES7
-1. [Decorators](https://github.com/wycats/javascript-decorators)
+- [Decorators](https://github.com/wycats/javascript-decorators)
 ```js
 @annotation
 class MyClass {}
@@ -19,7 +19,7 @@ function annotation(target) {
 ```
 
 ### Redux
-1. [Connect to redux](https://github.com/rackt/react-redux#quick-start)
+- [Connect to redux](https://github.com/rackt/react-redux#quick-start)
 ```js
 @connect((state) => ({ todos: state.todos }))
 class App extends React.Component {
