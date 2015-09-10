@@ -1,25 +1,14 @@
 import React from 'react';
-import { Container } from 'flux/utils';
+import { connect } from 'react-redux';
 import Header from './Header';
-import TodoStore from '../stores/TodoStore';
 
-class HeaderContainer extends React.Component {
-
-  static getStores() {
-    return [ TodoStore ];
-  }
-
-  static calculateState() {
-    return {
-      todoNumber: TodoStore.getState().count((todo) => !todo.completed)
-    }
-  }
-
+@connect((state) => ({
+  todoNumber: state.todos.count((todo) => !todo.completed)
+}))
+export default class HeaderContainer extends React.Component {
   render() {
     return (
-      <Header {...this.props} todoNumber={this.state.todoNumber} />
+      <Header {...this.props} />
     );
   }
 }
-
-export default Container.create(HeaderContainer);

@@ -1,31 +1,22 @@
 import React from 'react';
-import { Container } from 'flux/utils';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import TodoList from './TodoList';
-import TodoStore from '../stores/TodoStore';
 import { toggleTodo, editTodo, deleteTodo } from '../actions/TodoActions';
 
-class TodoListContainer extends React.Component {
-
-  static getStores() {
-    return [ TodoStore ];
-  }
-
-  static calculateState() {
-    return {
-      todos: TodoStore.getState()
-    };
-  }
-
+@connect(
+  (state) => ({ todos: state.todos }),
+  (dispatch) => bindActionCreators({ toggleTodo, editTodo, deleteTodo }, dispatch)
+)
+export default class TodoListContainer extends React.Component {
   render() {
     return (
       <TodoList
         {...this.props}
-        todos={this.state.todos}
-        onToggle={toggleTodo}
-        onEdit={editTodo}
-        onDelete={deleteTodo} />
+        todos={this.props.todos}
+        onToggle={this.props.toggleTodo}
+        onEdit={this.props.editTodo}
+        onDelete={this.props.deleteTodo} />
     );
   }
 }
-
-export default Container.create(TodoListContainer);
