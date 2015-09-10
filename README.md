@@ -8,7 +8,7 @@
 
 ## 你可以在這階段學習
 ### Flux
-1. [Views and Controller-Views](http://facebook.github.io/flux/docs/overview.html#views-and-controller-views)
+- [Views and Controller-Views](http://facebook.github.io/flux/docs/overview.html#views-and-controller-views)
 ```js
 import TodoStore from '../stores/TodoStore';
 
