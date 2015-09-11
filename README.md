@@ -31,5 +31,11 @@
 [Level 17.&nbsp;&nbsp;Redux / Connect View](https://github.com/shiningjason1989/ReactTodosTutorial/tree/%2317_redux_connect_view)  
 
 
+## 或許
+你還會想看
+1. [ReactNativeTodos](https://github.com/shiningjason1989/ReactNativeTodos): 示範如何將 React 版本轉換成 ReactNative
+2. [ExponentTodos](https://github.com/shiningjason1989/ExponentTodos/tree/master): 示範如何發佈到實機 iphone 上進行測試，並且可以在沒有 mac 的情況下也能開發 React Native（ps. 雖然有的話會好太多了！） 
+
+
 ## 最後
 Enjoy and Hane Fun : )
