@@ -10,6 +10,7 @@
 ## 你可以在這階段學習
 1. 瞭解如何以元件的觀點開發 React
 2. 瞭解如何動態顯示元件，及 key 的功用
+3. 瞭解 ES6 的 arrows 的寫法和功能
 
 ### JS
 - [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
