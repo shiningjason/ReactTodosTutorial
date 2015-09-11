@@ -3,12 +3,16 @@
 
 
 ## 本階段目標
-1. 完成切換完成待辦事項的功能
-2. 完成刪除待辦事項的功能
-3. 完成編輯待辦事項的功能
+1. 使用 React Dev Tools
+2. 完成切換待辦事項狀態的功能
+3. 完成刪除待辦事項的功能
+4. 完成編輯待辦事項的功能
 
 
 ## 你可以在這階段學習
+1. 瞭解如何使用 Dev tools
+2. 瞭解如何 React 元件的生命週期
+
 ### ES6
 - [Array.prototype.find()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 ```
@@ -34,9 +38,9 @@ console.log(c); // { text: 'b say hello', a: 'a', b: 'b' }
 ```
 
 ### React
-- [React Dev Tools](https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html)
+- [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
-![Component Lifecycle](http://i.imgur.com/aAMi0NH.jpg)
+![Component Lifecycle](https://pbs.twimg.com/media/B-G3_T8CcAAmTHV.jpg:large)
 - [The ref String Attribute](https://facebook.github.io/react/docs/more-about-refs.html#the-ref-string-attribute)
 ```js
 class Input extends React.Component {
