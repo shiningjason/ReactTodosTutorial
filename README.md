@@ -35,7 +35,7 @@
 ### 你會想看
 1. [ReactFlux123](https://shiningjason1989.github.io/ReactFlux123): 教育訓練投影片
 2. [ReactNativeTodos](https://github.com/shiningjason1989/ReactNativeTodos): 示範如何將 React 版本轉換成 ReactNative  
-3. [ExponentTodos](https://github.com/shiningjason1989/ExponentTodos/tree/master): 示範如何發佈到實機 iphone 上進行測試，並且可以在沒有 mac 的情況下也能開發 React Native（ps. 雖然有的話會好太多了！） 
+3. [ExponentTodos](https://github.com/shiningjason1989/ExponentTodos/tree/master): 示範如何發佈到 iphone 實機 上進行測試，並且可以在沒有 mac 的情況下也能開發 React Native（os. 雖然有的話就好太多了 :p） 
 
 
 ## 最後
