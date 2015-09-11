@@ -11,7 +11,7 @@
 
 ## 你可以在這階段學習
 1. 瞭解如何使用 Dev tools
-2. 瞭解如何 React 元件的生命週期
+2. 瞭解 React 元件的生命週期
 
 ### ES6
 - [Array.prototype.find()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
