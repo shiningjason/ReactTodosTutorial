@@ -12,6 +12,8 @@
 2. 瞭解元件是可以層層包覆的
 3. 瞭解如何使用 propTypes 定義元件要吃的 props 型別，用來確保開發時正確的使用底層元件
 4. 瞭解如何設定 defaultProps
+5. 瞭解 ES6 的 const 用法
+6. 瞭解 ES6 的 destructuring 用法
 
 ### ES6
 - [Const](https://babeljs.io/docs/learn-es2015/#let-const)
