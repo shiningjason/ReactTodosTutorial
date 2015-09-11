@@ -3,13 +3,13 @@
 
 
 ## 本階段目標
-1. 使用 JS 定義 App 的元件樣式，讓 App 能夠置中
-2. 完成 Header 元件的樣式定義，讓它稍微美一點
-3. 完成 TodoList 元件的樣式定義，讓它稍微美一點
-4. 完成 TodoItem 元件的樣式定義，讓它稍微美一點
+1. 使用 JS 定義所有元件（App, Header, TodoList, TodoItem）的樣式
 
 
 ## 你可以在這階段學習
+1. 瞭解如何使用 inline style
+2. 瞭解如何使用 Flexbox
+
 ### CSS
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
@@ -35,8 +35,11 @@ const styles = {
 
 
 ## 你或許會用到或想看到的東西
+### 文章或簡報
+- [React: CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js)
+- [CSS Modules](http://glenmaddern.com/articles/css-modules)
+
+### 相關資源庫
 - [Radium](https://github.com/FormidableLabs/radium)
 - [react-style](https://github.com/js-next/react-style)
 - [CSS Modules](https://github.com/css-modules/css-modules)
-- [關於 CSS Modules 的文章](http://glenmaddern.com/articles/css-modules)
-
