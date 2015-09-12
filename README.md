@@ -11,7 +11,7 @@
 ## 你可以在這階段學習
 1. 瞭解如何從 Store 中取得資料
 2. 瞭解如何呼叫 Actions 來處理使用者行為
-3. 瞭解 Single Source of Truth（唯一真相資料）的意義
+3. 瞭解 Single Source of Truth（單一資料源）的意義
 
 PS. 做完本章節後，請再次思考 flux 的架構圖所有節點的意義 :)
 ![Flux 架構圖](http://blog.krawaller.se/img/flux-diagram.png)
