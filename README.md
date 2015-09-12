@@ -3,10 +3,19 @@
 
 
 ## 本階段目標
-1. 修改 App 元件，讓它呼叫 TodoAction 來處理使用者操作行為，並傾聽 TodoStore 來取得資料
+1. 修改 App 元件
+  1. 呼叫 TodoAction 來處理使用者操作行為
+  2. 傾聽 TodoStore 來修改內部的 state
 
 
 ## 你可以在這階段學習
+1. 瞭解如何從 Store 中取得資料
+2. 瞭解如何呼叫 Actions 來處理使用者行為
+3. 瞭解 Single Source of Truth（唯一真相資料）的意義
+
+PS. 做完本章節後，請再次思考 flux 的架構圖所有節點的意義 :)
+![Flux 架構圖](http://blog.krawaller.se/img/flux-diagram.png)
+
 ### Flux
 - [Views and Controller-Views](http://facebook.github.io/flux/docs/overview.html#views-and-controller-views)
 ```js
