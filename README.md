@@ -3,7 +3,7 @@
 
 
 ## 本階段目標
-1. 新增專案中單一的 Dipatcher
+1. 新增專案的 AppDispatcher 實例，並繼承 flux 中的 dispatcher
 
 
 ## 你可以在這階段學習
