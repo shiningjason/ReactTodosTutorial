@@ -7,6 +7,9 @@
 
 
 ## 你可以在這階段學習
+1. 瞭解 flux 的架構
+2. 瞭解 Dispatcher 在 flux 中所擔任的角色
+
 ### Flux
 - [Flux Overview](http://facebook.github.io/flux/docs/overview.html)
 ![Flux 架構圖](http://blog.krawaller.se/img/flux-diagram.png)
