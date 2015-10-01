@@ -35,7 +35,6 @@
   "scripts": {
     "start": "babel-node devServer.js",
     "build": "webpack --config webpack.prod.config.js",
-    "dev": "webpack-dev-server --config webpack.dev.config.js --colors --content-base ./build",
     "test": "jest"
   },
   "author": {
