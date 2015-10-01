@@ -1,18 +1,21 @@
 import React from 'react';
-import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import App from './App';
-import * as reducers from '../reducers';
+import createStore from '../utils/createStore';
+import createDebugPanel from '../utils/createDebugPanel';
 
-const composedReducer = combineReducers(reducers);
-const store = createStore(composedReducer);
+const store = createStore();
+const debugPanel = createDebugPanel(store);
 
 export default class AppContainer extends React.Component {
   render() {
     return (
-      <Provider store={store}>
-        {() => <App />}
-      </Provider>
+      <div>
+        <Provider store={store}>
+          {() => <App />}
+        </Provider>
+        {debugPanel}
+      </div>
     );
   }
 }
