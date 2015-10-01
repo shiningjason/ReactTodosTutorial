@@ -29,6 +29,8 @@
 [Level 15.&nbsp;&nbsp;Redux / Provider & Store](https://github.com/shiningjason1989/ReactTodosTutorial/tree/%2315_redux_provider_store)  
 [Level 16.&nbsp;&nbsp;Redux / Actions](https://github.com/shiningjason1989/ReactTodosTutorial/tree/%2316_redux_actions)  
 [Level 17.&nbsp;&nbsp;Redux / Connect View](https://github.com/shiningjason1989/ReactTodosTutorial/tree/%2317_redux_connect_view)  
+[Level 18.&nbsp;&nbsp;Redux / DevTools](https://github.com/shiningjason1989/ReactTodosTutorial/tree/%2318_redux_devtools)  
+[Level 19.&nbsp;&nbsp;React Transform Boilerplate](https://github.com/shiningjason1989/ReactTodosTutorial/tree/%2319_react_transform_boilerplate)  
 
 
 ## 或許
