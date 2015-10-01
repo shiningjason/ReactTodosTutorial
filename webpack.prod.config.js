@@ -14,7 +14,7 @@ module.exports = {
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       },
-      __DEVELOPMENT__: false,
+      __DEV__: false,
       __DEVTOOLS__: false
     }),
     new webpack.NoErrorsPlugin()

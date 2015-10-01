@@ -20,7 +20,7 @@ export default () => {
   const composedReducer = combineReducers(reducers);
   const store = finalCreateStore(composedReducer);
 
-  if (__DEVELOPMENT__ && module.hot) {
+  if (__DEV__ && module.hot) {
     module.hot.accept('../reducers', () =>
       store.replaceReducer(combineReducers(require('../reducers')))
     );
