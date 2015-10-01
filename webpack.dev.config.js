@@ -4,8 +4,7 @@ import webpack from 'webpack';
 export default {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
+    'webpack-hot-middleware/client',
     path.join(__dirname, 'src/scripts/main')
   ],
   output: {
@@ -17,7 +16,8 @@ export default {
       __DEV__: true,
       __DEVTOOLS__: true
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [
