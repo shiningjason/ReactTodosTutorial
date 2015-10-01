@@ -23,7 +23,7 @@ export default {
     loaders: [
       {
         test: /\.js?$/,
-        loader: 'react-hot!babel',
+        loader: 'babel',
         exclude: /node_modules/
       },
 
