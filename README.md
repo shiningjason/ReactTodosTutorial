@@ -37,7 +37,7 @@ export default {
 
 
 ### Redux / 如何使用 DevTools
-請參考以下三支程式
-1. [utils/createStore.js](https://github.com/shiningjason1989/ReactTodosTutorial/blob/%2318_redux_devtools/src/scripts/utils/createStore.js)
-2. [utils/createDebugPanel.js](https://github.com/shiningjason1989/ReactTodosTutorial/blob/%2318_redux_devtools/src/scripts/utils/createDebugPanel.js)
-3. [components/AppContainer.js](https://github.com/shiningjason1989/ReactTodosTutorial/blob/%2318_redux_devtools/src/scripts/components/AppContainer.js)
+請參考以下三支程式  
+1. [utils/createStore.js](https://github.com/shiningjason1989/ReactTodosTutorial/blob/%2318_redux_devtools/src/scripts/utils/createStore.js)  
+2. [utils/createDebugPanel.js](https://github.com/shiningjason1989/ReactTodosTutorial/blob/%2318_redux_devtools/src/scripts/utils/createDebugPanel.js)  
+3. [components/AppContainer.js](https://github.com/shiningjason1989/ReactTodosTutorial/blob/%2318_redux_devtools/src/scripts/components/AppContainer.js)  
