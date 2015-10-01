@@ -26,4 +26,4 @@
 
 
 ## 參考
-[gaearon/react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate)
+1. [gaearon/react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate)
